@@ -23,4 +23,6 @@ jobs:
                       ${{ github.workspace }}/
                       !${{ github.workspace }}/node_modules/
                       !${{ github.workspace }}/.git/
+                      !${{ github.workspace }}/.github/
+                      !${{ github.workspace }}/.wordpress-org/
                       !${{ github.workspace }}/assets/
