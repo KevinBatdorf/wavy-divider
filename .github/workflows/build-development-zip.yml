@@ -1,0 +1,25 @@
+name: Build development zip file
+on: push
+jobs:
+    build:
+        name: Build zip file
+        runs-on: ubuntu-latest
+        steps:
+            - name: Check out code
+              uses: actions/checkout@v2
+            - name: npm install and build
+              run: |
+                  npm ci
+                  npm run build
+              env:
+                  CI: true
+
+            - name: Package
+              uses: actions/upload-artifact@v2
+              with:
+                  name: wavy-divider
+                  retention-days: 5
+                  path: |
+                      ${{ github.workspace }}/
+                      !${{ github.workspace }}/node_modules/
+                      !${{ github.workspace }}/.git/

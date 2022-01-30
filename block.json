@@ -1,0 +1,51 @@
+{
+    "$schema": "https://json.schemastore.org/block.json",
+    "apiVersion": 2,
+    "name": "wavy/wavy-divider",
+    "version": "0.1.0",
+    "title": "Wavy Divider",
+    "category": "design",
+    "attributes": {
+        "path": {
+            "type": "string",
+            "default": "M 0,119.35212059460474 S 4,85.16571336505325 11,141.35683616138658, S 14,192.04456179374984 21,181.3599385574178, S 24,78.45356016565023 31,177.40802259902048, S 34,85.59356919060087 41,57.69293841042929, S 44,179.1166368575346 51,220.44227524613638, S 54,241.09972530754055 61,173.1681642777189, S 64,131.7494653131286 71,160.98512462466036, S 74,270.2457275188618 81,171.93163471852463, S 84,273.66613606102914 91,333.11691727207926, S 94,272.6528417908621 101,210.06832704680085 V 400 H 0 Z"
+        },
+        "height": {
+            "type": "number",
+            "default": 400
+        },
+        "direction": {
+            "type": "string",
+            "default": "bottom"
+        },
+        "fill": {
+            "type": "string",
+            "default": ""
+        },
+        "opacity": {
+            "type": "number",
+            "default": 1
+        },
+        "points": {
+            "type": "number",
+            "default": 7
+        },
+        "smoothness": {
+            "type": "string",
+            "default": "smooth"
+        }
+    },
+    "description": "A colorful, fun, lightweight divider block to energize your website with character and pizazz",
+    "supports": {
+        "html": false,
+        "color": {
+            "background": true,
+            "gradients": false,
+            "text": false
+        }
+    },
+    "textdomain": "ebb-separators",
+    "editorScript": "file:./build/index.js",
+    "editorStyle": "file:./build/index.css",
+    "style": "file:./build/style-index.css"
+}
