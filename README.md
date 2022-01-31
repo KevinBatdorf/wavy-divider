@@ -12,6 +12,7 @@ View this block plugin [on WordPress.org](https://wordpress.org/plugins/wavy-div
 
 ### Features
 - Color settings, including opacity.
+- Choose between wide, normal, and full width
 - Choose between rounded edges and stright lines
 - Supports top or bottom shapes
 - Stack multiple dividers with group block (see below)

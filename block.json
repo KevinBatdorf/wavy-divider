@@ -33,11 +33,16 @@
         "smoothness": {
             "type": "string",
             "default": "smooth"
+        },
+        "align": {
+            "type": "string",
+            "default": "full"
         }
     },
     "description": "A colorful, fun, lightweight divider block to energize your website with character and pizazz",
     "supports": {
         "html": false,
+        "align": ["full", "wide"],
         "color": {
             "background": true,
             "gradients": false,

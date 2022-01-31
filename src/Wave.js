@@ -13,7 +13,7 @@ export const Wave = ({
         fill = backgroundColor
             ? `var(--wp--preset--color--${backgroundColor})`
             : style?.color?.background
-        fill = fill ?? 'var(--wp--preset--color--secondary, #000)'
+        fill = fill ?? 'var(--wp--preset--color--foreground, #efeadd)'
     }
 
     return (

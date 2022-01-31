@@ -17,6 +17,7 @@ View on GitHub (https://github.com/KevinBatdorf/wavy-divider)
 
 = Features =
 - Color settings, including opacity.
+- Choose between wide, normal, and full width
 - Choose between rounded edges and stright lines
 - Supports top or bottom shapes
 - Stack multiple dividers with group block (see below)
@@ -43,8 +44,8 @@ wavy-divider-remove-padding
 == Screenshots ==
 
 1. Separate content with wavy dividers
-2. Control height, point count, smoothness, and more.
-3. Add gradients in combination with group blocks
+2. Add gradients in combination with group blocks
+3. Control height, point count, smoothness, and more.
 
 == Changelog ==
 
