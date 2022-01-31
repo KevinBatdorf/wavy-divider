@@ -10,7 +10,7 @@ A colorful, fun, lightweight divider block to energize your website with charact
 
 == Description ==
 
-This wavy SVG divider generator will let you add a simple wavy divider to anywhere on your page, giving you the ability to separate blocks of content with an impressive, professional-looking design element.
+Generate and add a simple wavy divider to anywhere on your page, giving you the ability to separate blocks of content with an impressive, professional-looking design element.
 
 = Features =
 - Color settings
@@ -20,7 +20,7 @@ This wavy SVG divider generator will let you add a simple wavy divider to anywhe
 
 = Gradients =
 
-To use a gradient, you need to wrap the Wavy divider in a group block and apply the gradient to your group block. After that, you create a wavy shape and apply a color that matches your content background (e.g. white)
+To use a gradient, you need to wrap the wavy divider in a group block and apply the gradient to the group block. After that, create a wavy shape and apply a color that matches your content background (e.g. white). You can then switch the direction of the divider (under settings) to give a mirrored effect. This way the gradient is applied to the group block and the divider acts as a mask.
 
 = Group Block =
 
