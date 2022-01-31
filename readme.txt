@@ -12,6 +12,9 @@ A colorful, fun, lightweight divider block to energize your website with charact
 
 Generate and add a simple wavy divider to anywhere on your page, giving you the ability to separate blocks of content with an impressive, professional-looking design element.
 
+Follow on Twitter (https://twitter.com/kevinbatdorf)
+View on GitHub (https://github.com/KevinBatdorf/wavy-divider)
+
 = Features =
 - Color settings
 - Supports top or bottom shapes
