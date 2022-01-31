@@ -8,6 +8,8 @@ Generate and add a simple wavy divider to anywhere on your page, giving you the 
 
 [![Twitter](https://img.shields.io/twitter/url/https/twitter.com/kevinbatdorf.svg?style=social&label=Follow%20%40kevinbatdorf)](https://twitter.com/kevinbatdorf)
 
+View this block plugin [on WordPress.org](https://wordpress.org/plugins/wavy-divider)
+
 ### Features
 - Color settings, including opacity.
 - Choose between rounded edges and stright lines
