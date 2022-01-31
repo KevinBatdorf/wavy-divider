@@ -1,4 +1,4 @@
-Wavy Divider - A WordPress block
+# Wavy Divider - A WordPress block
 
 A colorful, fun, lightweight divider block to energize your website with character and pizazz
 
@@ -20,5 +20,5 @@ To use a gradient, you need to wrap the Wavy divider in a group block and apply 
 
 If nesting the wavy divider in a group block, you may want to remove the padding and margins so that the wavy divider will not have spacing around it. To handle this, select the group block, and under "Advanced" add these two classes:
 
-- `wavvy-divider-remove-margin`
-- `wavvy-divider-remove-padding`
+- `wavy-divider-remove-margin`
+- `wavy-divider-remove-padding`
