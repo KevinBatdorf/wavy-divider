@@ -9,10 +9,12 @@ Generate and add a simple wavy divider to anywhere on your page, giving you the 
 [![Twitter](https://img.shields.io/twitter/url/https/twitter.com/kevinbatdorf.svg?style=social&label=Follow%20%40kevinbatdorf)](https://twitter.com/kevinbatdorf)
 
 ### Features
-- Color settings
+- Color settings, including opacity.
+- Choose between rounded edges and stright lines
 - Supports top or bottom shapes
 - Stack multiple dividers with group block (see below)
 - Gradients - easy to use (see below)
+- Control height, number of points, and direction
 
 ### Gradients
 

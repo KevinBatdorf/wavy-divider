@@ -16,10 +16,12 @@ Follow on Twitter (https://twitter.com/kevinbatdorf)
 View on GitHub (https://github.com/KevinBatdorf/wavy-divider)
 
 = Features =
-- Color settings
+- Color settings, including opacity.
+- Choose between rounded edges and stright lines
 - Supports top or bottom shapes
 - Stack multiple dividers with group block (see below)
 - Gradients - easy to use (see below)
+- Control height, number of points, and direction
 
 = Gradients =
 
