@@ -28,7 +28,7 @@ const buildCurves = ({ points, height, variations }) => {
         const startX = Math.max(x - smoothness - spread, previousX)
         const endX = Math.max(x + smoothness, previousX)
         previousX = endX
-        return ` S ${startX},${start} ${endX},${end}`
+        return ` S ${startX},${start} ${Math.min(endX, 100)},${end}`
     })
 }
 
