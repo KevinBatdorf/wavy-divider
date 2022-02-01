@@ -20,29 +20,21 @@ export const Controls = ({ attributes, setAttributes }) => {
         <InspectorControls>
             <PanelBody title={__('Settings', 'wavy-divider')}>
                 <BaseControl>
-                    <div
-                        style={{
-                            marginBottom: '1rem',
-                            display: 'flex',
-                            justifyContent: 'center',
-                        }}
+                    <Button
+                        style={{ width: '100%' }}
+                        isLarge
+                        isPrimary
+                        onClick={() =>
+                            setAttributes({
+                                path: buildPath({ ...attributes }),
+                            })
+                        }
+                        icon={<Icon icon={dice()} />}
                     >
-                        <Button
-                            style={{
-                                width: '100%',
-                            }}
-                            isLarge
-                            isPrimary
-                            onClick={() =>
-                                setAttributes({
-                                    path: buildPath({ ...attributes }),
-                                })
-                            }
-                            icon={<Icon icon={dice()} />}
-                        >
-                            {__('Shuffle waves', 'wavy-divider')}
-                        </Button>
-                    </div>
+                        {__('Shuffle waves', 'wavy-divider')}
+                    </Button>
+                </BaseControl>
+                <BaseControl>
                     <SmoothnessControl
                         attributes={attributes}
                         setAttributes={setAttributes}
