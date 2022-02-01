@@ -39,9 +39,8 @@ export const Controls = ({ attributes, setAttributes }) => {
                                 })
                             }
                             icon={<Icon icon={dice()} />}
-                            label={__('Shuffle', 'wavy-divider')}
                         >
-                            {__('Shuffle', 'wavy-divider')}
+                            {__('Shuffle waves', 'wavy-divider')}
                         </Button>
                     </div>
                     <SmoothnessControl
