@@ -125,7 +125,7 @@ const InfoTip = () => (
                 __html: safeHTML(
                     sprintf(
                         __(
-                            'View %1$sblock readme%2$s for tips on creating gradients plus more.',
+                            'View the %1$sreadme%2$s for tips on creating gradients, using group blocks, and more.',
                             'wavy-divider',
                         ),
                         '<a target="_blank" rel="noopener noreferrer" href="https://github.com/KevinBatdorf/wavy-divider">',
