@@ -4,9 +4,11 @@ import './style.scss'
 import { blockIcon } from './icons'
 import { Wave } from './Wave'
 import { Controls } from './Controls'
+import { __ } from '@wordpress/i18n'
 
 registerBlockType('wavy/wavy-divider', {
     icon: blockIcon,
+    title: __('Wavy Divider', 'wavy-divider'),
     example: {
         attributes: {
             points: 4,

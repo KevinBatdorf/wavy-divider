@@ -2,7 +2,7 @@
 Contributors:      kbat82
 Tags:              hr, separator, svg, divider, gradient, wavy, block
 Tested up to:      5.9.0
-Stable tag:        1.0.0
+Stable tag:        1.1.0
 License:           GPL-2.0-or-later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -48,6 +48,12 @@ If nesting the wavy divider in a group block, you may want to remove the padding
 3. Control height, point count, smoothness, and more.
 
 == Changelog ==
+
+= 1.1.0 =
+* Feature: Add two examples tot he pattern library
+* Enhancement: Add wp_set_script_translations
+* Tweak: Change shuffle button to secondary button styling
+* Fix: Add title prop to `registerBlockType`
 
 = 1.0.0 =
 * Initial release

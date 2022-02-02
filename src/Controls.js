@@ -23,7 +23,7 @@ export const Controls = ({ attributes, setAttributes }) => {
                     <Button
                         style={{ width: '100%' }}
                         isLarge
-                        isPrimary
+                        isSecondary
                         onClick={() =>
                             setAttributes({
                                 path: buildPath({ ...attributes }),
