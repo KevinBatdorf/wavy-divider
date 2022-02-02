@@ -1,6 +1,6 @@
 === Wavy Divider ===
 Contributors:      kbat82
-Tags:              block, hr, separator, svg, divider, wavy, gradient
+Tags:              hr, separator, svg, divider, gradient, wavy, block
 Tested up to:      5.9.0
 Stable tag:        1.0.0
 License:           GPL-2.0-or-later
