@@ -1,8 +1,9 @@
 # Wavy Divider - A WordPress block
+![alt text](.wordpress-org/banner-772x250.png "90s inspired logo banner")
 
 A colorful, fun, lightweight divider block to energize your website with character and pizazz
 
-![alt text](assets/waves.gif "Title")
+![alt text](assets/waves.gif "Waves gif")
 
 Generate and add a simple wavy divider to anywhere on your page, giving you the ability to separate blocks of content with an impressive, professional-looking design element.
 
@@ -29,3 +30,7 @@ If nesting the wavy divider in a group block, you may want to remove the padding
 
 - `wavy-divider-remove-margin`
 - `wavy-divider-remove-padding`
+
+## Example Screenshots
+![alt text](.wordpress-org/screenshot-1.png "Example")
+![alt text](.wordpress-org/screenshot-2.png "Example 2")
