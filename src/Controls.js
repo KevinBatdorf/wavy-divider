@@ -22,7 +22,6 @@ export const Controls = ({ attributes, setAttributes }) => {
                 <BaseControl>
                     <Button
                         style={{ width: '100%' }}
-                        isLarge
                         isSecondary
                         onClick={() =>
                             setAttributes({
