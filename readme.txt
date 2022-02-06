@@ -50,7 +50,7 @@ If nesting the wavy divider in a group block, you may want to remove the padding
 == Changelog ==
 
 = 1.1.4 =
-* Fix: Convert ourput to non-jsx html.
+* Fix: Swap fill-opacity attribute with opacity styling.
 * Tweak: Clamp default state to integers
 
 = 1.1.3 =
