@@ -2,7 +2,7 @@
 Contributors:      kbat82
 Tags:              hr, separator, svg, divider, gradient, wavy, block
 Tested up to:      5.9.0
-Stable tag:        1.1.3
+Stable tag:        1.1.4
 License:           GPL-2.0-or-later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -48,6 +48,10 @@ If nesting the wavy divider in a group block, you may want to remove the padding
 3. Control height, point count, smoothness, and more.
 
 == Changelog ==
+
+= 1.1.4 =
+* Fix: Convert ourput to non-jsx html.
+* Tweak: Clamp default state to integers
 
 = 1.1.3 =
 * Fix: Move default attributes to index.js file - block.json isn't currently being loaded when imported from block library interface.
