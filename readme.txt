@@ -49,6 +49,9 @@ If nesting the wavy divider in a group block, you may want to remove the padding
 
 == Changelog ==
 
+* Fix: Swap fill-opacity attribute with opacity styling.
+* Tweak: Clamp default state to integers
+
 = 1.1.3 =
 * Fix: Move default attributes to index.js file - block.json isn't currently being loaded when imported from block library interface.
 
