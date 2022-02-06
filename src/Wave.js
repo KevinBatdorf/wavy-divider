@@ -32,9 +32,8 @@ export const Wave = ({
             }}
         >
             <path
-                style={{ transition: 'all .5s ease' }}
+                style={{ transition: 'all .5s ease', opacity }}
                 fill={fill}
-                fillOpacity={opacity}
                 d={path}
             />
         </svg>
