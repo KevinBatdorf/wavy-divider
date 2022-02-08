@@ -18,15 +18,15 @@ if (strtotime('15 january this year') <= time() &&
     ]);
 }
 
-register_block_pattern('wavy/acid-burn', [
-    'title' => 'Acid Burn',
-    'categories' => ['wavy-dividers'],
-    'content' => file_get_contents(__DIR__ . '/gradients/acid-burn.html'),
-]);
 register_block_pattern('wavy/so-it-goes', [
     'title' => 'So it goes...',
     'categories' => ['wavy-dividers'],
     'content' => file_get_contents(__DIR__ . '/defaults/so-it-goes.html'),
+]);
+register_block_pattern('wavy/acid-burn', [
+    'title' => 'Acid Burn',
+    'categories' => ['wavy-dividers'],
+    'content' => file_get_contents(__DIR__ . '/gradients/acid-burn.html'),
 ]);
 register_block_pattern('wavy/leaf-on-the-wind', [
     'title' => 'A Leaf on the Wind',
