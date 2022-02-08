@@ -35,6 +35,10 @@ If nesting the wavy divider in a group block, you may want to remove the padding
 - `wavy-divider-remove-margin`
 - `wavy-divider-remove-padding`
 
+= Patterns =
+
+Within the block inserter, under the Patterns tab, select 'Wavy Divider' from the dropdown menu to view some special, custom-made wavy patterns. And depending on the time of year, seasonal designs too!
+
 == Installation ==
 
 1. Install the plugin through the WordPress plugins screen directly.
