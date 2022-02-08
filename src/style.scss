@@ -4,6 +4,11 @@ body div.wp-block-wavy-wavy-divider {
     background-color: transparent !important;
     margin: 0;
 }
+.block-editor-block-list__block.wp-block.wp-block-wavy-wavy-divider ~ div.wp-block,
+.editor-styles-wrapper .wp-block .wp-block-wavy-wavy-divider ~ div.wp-block,
+body div.wp-block-wavy-wavy-divider ~ div.wp-block {
+    margin-top: 0!important;
+}
 .wavy-divider-remove-padding {
     padding: 0 !important;
 }
