@@ -23,6 +23,11 @@ register_block_pattern('wavy/acid-burn', [
     'categories' => ['wavy-dividers'],
     'content' => file_get_contents(__DIR__ . '/gradients/acid-burn.html'),
 ]);
+register_block_pattern('wavy/so-it-goes', [
+    'title' => 'So it goes...',
+    'categories' => ['wavy-dividers'],
+    'content' => file_get_contents(__DIR__ . '/defaults/so-it-goes.html'),
+]);
 register_block_pattern('wavy/leaf-on-the-wind', [
     'title' => 'A Leaf on the Wind',
     'categories' => ['wavy-dividers'],
@@ -32,9 +37,4 @@ register_block_pattern('wavy/the-mystery-of-life', [
     'title' => 'The Mystery of Life',
     'categories' => ['wavy-dividers'],
     'content' => file_get_contents(__DIR__ . '/gradients/the-mystery-of-life.html'),
-]);
-register_block_pattern('wavy/earth-was-here', [
-    'title' => 'The Earth Was Once Here',
-    'categories' => ['wavy-dividers'],
-    'content' => file_get_contents(__DIR__ . '/defaults/earth-was-here.html'),
 ]);
