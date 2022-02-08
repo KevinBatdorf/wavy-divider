@@ -15,3 +15,5 @@ add_action('init', function () {
     register_block_type(__DIR__);
     wp_set_script_translations('wavy-wavy-divider', 'wavy-divider');
 });
+
+include_once __DIR__ . '/patterns/loader.php';
