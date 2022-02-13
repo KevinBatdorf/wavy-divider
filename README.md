@@ -15,6 +15,7 @@ View this block plugin [on WordPress.org](https://wordpress.org/plugins/wavy-div
 - Color settings, including opacity.
 - Choose between wide, normal, and full width
 - Choose between rounded edges and stright lines
+- Fine tune curves and lines with built-in controls
 - Supports top or bottom shapes
 - Stack multiple dividers with group block (see below)
 - Gradients - easy to use (see below)

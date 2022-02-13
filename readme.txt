@@ -2,7 +2,7 @@
 Contributors:      kbat82
 Tags:              hr, separator, svg, divider, gradient, wavy, block
 Tested up to:      5.9.0
-Stable tag:        1.2.0
+Stable tag:        1.3.0
 License:           GPL-2.0-or-later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -19,6 +19,7 @@ Generate and add a simple wavy divider to anywhere on your page, giving you the 
 - Color settings, including opacity.
 - Choose between wide, normal, and full width
 - Choose between rounded edges and stright lines
+- Fine tune curves and lines with built-in controls
 - Supports top or bottom shapes
 - Stack multiple dividers with group block (see below)
 - Gradients - easy to use (see below)
@@ -52,6 +53,12 @@ Within the block inserter, under the Patterns tab, select 'Wavy Divider' from th
 3. Control height, point count, smoothness, and more.
 
 == Changelog ==
+
+= 1.3.0 =
+* Feature: Add controls to fine tuning
+* Feature: Add better line control
+* Feature: Allow single peak curves
+* Tweak: Adjust height, points, etc without changing peaks
 
 = 1.2.0 =
 * Fix: Add pattern examples, including Valentine's Day themed

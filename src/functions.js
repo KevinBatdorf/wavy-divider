@@ -1,4 +1,4 @@
-const randomNext = (prev) => {
+export const randomNext = (prev) => {
     // if going up
     if (prev < 0.7 && Math.random() > 0.5) {
         return random(0.3, Math.min(prev + 0.3, 0.9))
@@ -7,13 +7,16 @@ const randomNext = (prev) => {
     return random(Math.max(prev - 0.3, 0.1), Math.min(prev + 0.3, 0.9))
 }
 const random = (min, max) => {
-    return Math.random() * (max - min) + min
+    return Math.round((Math.random() * (max - min) + min) * 100) / 100
 }
 
-const buildLines = ({ points, height, variations }) => {
+const buildLines = ({ points, height, peaks, endingPeak }) => {
     return [...Array(points)]
         .map((_, i) => {
-            const point = height - height * variations[i][0]
+            const point =
+                i + 1 === points
+                    ? height - height * endingPeak
+                    : height - height * peaks[i][0]
             return ` L ${(((i + 1) / points) * 100).toFixed(0)},${point.toFixed(
                 0,
             )}`
@@ -21,12 +24,18 @@ const buildLines = ({ points, height, variations }) => {
         .join('')
 }
 
-const buildCurves = ({ points, height, variations }) => {
+const buildCurves = ({ points, height, peaks, endingPeak }) => {
     let previousX = 0
     return [...Array(points)]
         .map((_, i) => {
-            const start = height - height * variations[i][0]
-            const end = height - height * variations[i][1]
+            // Column height
+            const start = height - height * peaks[i][0]
+            const end =
+                i + 1 === points
+                    ? height - height * endingPeak
+                    : height - height * peaks[i][1]
+
+            // Column position
             const smoothness = Math.max(10 / points, 0.1)
             const spread = Math.min(points / 2, 5)
             const x = ((i + 1) / points) * 100
@@ -41,25 +50,53 @@ const buildCurves = ({ points, height, variations }) => {
         .join('')
 }
 
-export const buildPath = ({ height, points, direction, smoothness }) => {
-    const start = height - height * random(0.1, 0.9)
+export const calculateVariations = ({ startingPeak, points }) => {
+    console.log({ startingPeak, points })
+    if (points < 1) return []
     const variations = Array.from({ length: points }).reduce((acc, _, i) => {
-        const previous = acc[i - 1]?.length
-            ? acc[i - 1][0]
-            : Math.max(start / height, 0.1)
+        const previous = acc[i - 1]?.length ? acc[i - 1][0] : startingPeak
         const from = randomNext(previous)
         const end = randomNext(from)
 
         return [...acc, [from, end]]
     }, [])
-    const startingPosition = `M 0,${(height - start).toFixed(0)}`
+    console.log({ variations })
+    return variations
+}
+
+export const reconcilePeaks = ({ startingPeak, peaks, points }) => {
+    const neededPoints = points - peaks.length
+    return [
+        ...peaks,
+        ...calculateVariations({
+            startingPeak: peaks?.at(-1)?.length
+                ? peaks?.at(-1)[1]
+                : startingPeak[1],
+            points: neededPoints,
+        }),
+    ]
+}
+
+export const buildPath = ({
+    height,
+    points,
+    direction,
+    smoothness,
+    peaks,
+    startingPeak,
+    endingPeak,
+}) => {
+    const startingPosition = `M 0,${(height - height * startingPeak).toFixed(
+        0,
+    )}`
     const curves =
-        points < 3 || smoothness === 'rigid'
-            ? buildLines({ points, height, variations })
+        smoothness === 'rigid'
+            ? buildLines({ points, height, peaks, endingPeak })
             : buildCurves({
                   points,
                   height,
-                  variations,
+                  peaks,
+                  endingPeak,
               })
 
     const endingPosition = ` V ${direction === 'bottom' ? height : 0} H 0 Z`
