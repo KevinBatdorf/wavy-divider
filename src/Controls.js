@@ -94,7 +94,6 @@ export const Controls = ({ attributes, setAttributes }) => {
                                 startingPeak: attributes.startingPeak,
                                 points: attributes.points,
                             })
-                            console.log({ peaks })
                             setAttributes({
                                 peaks,
                                 path: buildPath({ ...attributes, peaks }),

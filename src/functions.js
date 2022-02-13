@@ -51,7 +51,6 @@ const buildCurves = ({ points, height, peaks, endingPeak }) => {
 }
 
 export const calculateVariations = ({ startingPeak, points }) => {
-    console.log({ startingPeak, points })
     if (points < 1) return []
     const variations = Array.from({ length: points }).reduce((acc, _, i) => {
         const previous = acc[i - 1]?.length ? acc[i - 1][0] : startingPeak
@@ -60,7 +59,6 @@ export const calculateVariations = ({ startingPeak, points }) => {
 
         return [...acc, [from, end]]
     }, [])
-    console.log({ variations })
     return variations
 }
 
