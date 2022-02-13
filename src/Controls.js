@@ -94,10 +94,13 @@ export const Controls = ({ attributes, setAttributes }) => {
                                 startingPeak: attributes.startingPeak,
                                 points: attributes.points,
                             })
-                            setAttributes({
+                            const endingPeak = peaks.at(-1)[1]
+                            const path = buildPath({
+                                ...attributes,
                                 peaks,
-                                path: buildPath({ ...attributes, peaks }),
+                                endingPeak,
                             })
+                            setAttributes({ endingPeak, peaks, path })
                         }}
                         icon={<Icon icon={dice()} />}
                     >
