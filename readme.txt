@@ -51,6 +51,7 @@ Within the block inserter, under the Patterns tab, select 'Wavy Divider' from th
 1. Separate content with wavy dividers
 2. Add gradients in combination with group blocks
 3. Control height, point count, smoothness, and more.
+3. Fine tune curves and shuffle waves.
 
 == Changelog ==
 
