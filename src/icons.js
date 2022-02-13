@@ -9,7 +9,10 @@ export const blockIcon = () => (
             aria-hidden="true"
             focusable="false"
         >
-            <path d="M 0,10 S 13,20 24,8 V 24 H 0 Z" fill="#1e1e1e"></path>
+            <path
+                d="M 0,12 S 4,12 8,8 S 12,6 16,10 S 20,16 24,22 V 24 H 0 Z"
+                fill="#1e1e1e"
+            ></path>
         </svg>
     </div>
 )

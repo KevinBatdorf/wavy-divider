@@ -8,7 +8,7 @@
     "attributes": {
         "path": {
             "type": "string",
-            "default": "M 0,119.35212059460474 S 4,85 11,141, S 14,192 21,181, S 24,78 31,177, S 34,85 41,57, S 44,179 51,220, S 54,241 61,173, S 64,131 71,160, S 74,270 81,171, S 84,273 91,333, S 94,272 101,210 V 400 H 0 Z"
+            "default": "M 0,240 S 12,288 18,200 S 29,200 35,144 S 45,120 52,232 S 62,104 68,92 S 79,148 85,60 S 95,96 100,240 V 400 H 0 Z"
         },
         "height": {
             "type": "number",
@@ -26,9 +26,28 @@
             "type": "number",
             "default": 1
         },
+        "startingPeak": {
+            "type": "number",
+            "default": 0.4
+        },
+        "endingPeak": {
+            "type": "number",
+            "default": 0.4
+        },
+        "peaks": {
+            "type": "array",
+            "default": [
+                [0.28, 0.5],
+                [0.5, 0.64],
+                [0.7, 0.42],
+                [0.74, 0.77],
+                [0.63, 0.85],
+                [0.76, 0.4]
+            ]
+        },
         "points": {
             "type": "number",
-            "default": 7
+            "default": 6
         },
         "smoothness": {
             "type": "string",
