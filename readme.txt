@@ -2,7 +2,7 @@
 Contributors:      kbat82
 Tags:              hr, separator, svg, divider, gradient, wavy, block
 Tested up to:      5.9.0
-Stable tag:        1.3.0
+Stable tag:        1.3.1
 License:           GPL-2.0-or-later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -54,6 +54,9 @@ Within the block inserter, under the Patterns tab, select 'Wavy Divider' from th
 3. Fine tune curves and shuffle waves.
 
 == Changelog ==
+
+= 1.3.1 =
+* Fix: Update spacer block in example to be compatible when Gutenberg plugin is disabled
 
 = 1.3.0 =
 * Feature: Add controls to fine tuning
