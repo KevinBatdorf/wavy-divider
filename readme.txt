@@ -1,4 +1,4 @@
-=== Wavy Divider - Create fun, interesting, wavy section dividers ===
+=== Wavy Divider - Delightful content section dividers ===
 Contributors:      kbat82
 Tags:              hr, waves, divider, block, wavy, separator, svg, gradient
 Tested up to:      5.9.0
