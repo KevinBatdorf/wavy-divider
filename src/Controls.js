@@ -133,7 +133,6 @@ export const Controls = ({ attributes, setAttributes }) => {
                                 />
                             )
                         }
-                        console.log({ point })
                         return (
                             <CurveControl
                                 key={point}
@@ -183,7 +182,6 @@ const SmoothnessControl = ({ attributes, setAttributes }) => (
 )
 
 const CurveControl = ({ attributes, point, setAttributes, lastPoint }) => {
-    console.log({ attributes, point, lastPoint })
     return (
         <div
             style={{
