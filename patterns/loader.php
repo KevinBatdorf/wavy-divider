@@ -2,39 +2,41 @@
 
 defined('ABSPATH') || exit;
 
-register_block_pattern_category(
-    'wavy-dividers',
-    ['label' => __('Wavy Dividers', 'wavy-divier') ]
-);
+add_action('init', function () {
+    if (function_exists('register_block_pattern_category')) {
+        register_block_pattern_category(
+            'wavy-dividers',
+            ['label' => __('Wavy Dividers', 'wavy-divier') ]
+        );
+    }
 
-$today = new DateTime();
-// Valentines Day
-if (strtotime('15 january this year') <= time() &&
-    time() <= strtotime('16 february this year')) {
-    register_block_pattern('wavy/valentines-1', [
-        'title' => 'Valentine\'s Day',
-        'categories' => ['wavy-dividers'],
-        'content' => file_get_contents(__DIR__ . '/seasonal/valentines-1.html'),
-    ]);
-}
+    if (function_exists('register_block_pattern')) {
+        register_block_pattern('wavy/wavy-1', [
+            'title' => 'Wavy Divider 1',
+            'categories' => ['wavy-dividers'],
+            'content' => file_get_contents(__DIR__ . '/defaults/wavy-1.html'),
+        ]);
+        register_block_pattern('wavy/wavy-2', [
+            'title' => 'Wavy Divider 2',
+            'categories' => ['wavy-dividers'],
+            'content' => file_get_contents(__DIR__ . '/defaults/wavy-2.html'),
+        ]);
+        register_block_pattern('wavy/wavy-3', [
+            'title' => 'Wavy Divider 3',
+            'categories' => ['wavy-dividers'],
+            'content' => file_get_contents(__DIR__ . '/defaults/wavy-3.html'),
+        ]);
 
-register_block_pattern('wavy/so-it-goes', [
-    'title' => 'So it goes...',
-    'categories' => ['wavy-dividers'],
-    'content' => file_get_contents(__DIR__ . '/defaults/so-it-goes.html'),
-]);
-register_block_pattern('wavy/acid-burn', [
-    'title' => 'Acid Burn',
-    'categories' => ['wavy-dividers'],
-    'content' => file_get_contents(__DIR__ . '/gradients/acid-burn.html'),
-]);
-register_block_pattern('wavy/leaf-on-the-wind', [
-    'title' => 'A Leaf on the Wind',
-    'categories' => ['wavy-dividers'],
-    'content' => file_get_contents(__DIR__ . '/defaults/leaf-on-the-wind.html'),
-]);
-register_block_pattern('wavy/the-mystery-of-life', [
-    'title' => 'The Mystery of Life',
-    'categories' => ['wavy-dividers'],
-    'content' => file_get_contents(__DIR__ . '/gradients/the-mystery-of-life.html'),
-]);
+        // Gradient Patterns
+        register_block_pattern('wavy/gradient-1', [
+            'title' => 'Wavy Divider Gradient 1',
+            'categories' => ['wavy-dividers'],
+            'content' => file_get_contents(__DIR__ . '/gradients/gradient-1.html'),
+        ]);
+        register_block_pattern('wavy/gradient-2', [
+            'title' => 'Wavy Gradient 2',
+            'categories' => ['wavy-dividers'],
+            'content' => file_get_contents(__DIR__ . '/gradients/gradient-2.html'),
+        ]);
+    }
+});

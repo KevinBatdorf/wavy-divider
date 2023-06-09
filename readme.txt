@@ -55,6 +55,12 @@ Within the block inserter, under the Patterns tab, select 'Wavy Divider' from th
 
 == Changelog ==
 
+* Update: Updated the patterns to work with 6.2
+* Tweak: Load patterns in init and check for function_exists
+* Tweak: Prevent attempting to laod patterns if function doesn't exist
+* Removed seasonal patterns
+* Added one new pattern
+
 = 1.3.4 =
 * Chore: Update npm packages + test for WP 6.2
 
