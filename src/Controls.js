@@ -53,10 +53,8 @@ export const Controls = ({ attributes, setAttributes }) => {
                         max={10}
                         value={attributes.points}
                         onChange={(points) => {
-                            const {
-                                startingPeak,
-                                peaks: initialPeaks,
-                            } = attributes
+                            const { startingPeak, peaks: initialPeaks } =
+                                attributes
                             const peaks = reconcilePeaks({
                                 peaks: initialPeaks,
                                 startingPeak,
@@ -102,8 +100,7 @@ export const Controls = ({ attributes, setAttributes }) => {
                             })
                             setAttributes({ endingPeak, peaks, path })
                         }}
-                        icon={<Icon icon={dice()} />}
-                    >
+                        icon={<Icon icon={dice()} />}>
                         {__('Shuffle', 'wavy-divider')}
                     </Button>
                 </BaseControl>
@@ -162,8 +159,7 @@ const DirectionControl = ({ attributes, setAttributes }) => (
         }
         label={__('Direction', 'wavy-divider')}
         value={attributes.direction}
-        isBlock
-    >
+        isBlock>
         <ToggleGroupControlOption value="top" label="Top" />
         <ToggleGroupControlOption value="bottom" label="Bottom" />
     </ToggleGroupControl>
@@ -179,8 +175,7 @@ const SmoothnessControl = ({ attributes, setAttributes }) => (
         }
         label={__('Smoothness', 'wavy-divider')}
         value={attributes.smoothness}
-        isBlock
-    >
+        isBlock>
         <ToggleGroupControlOption value="smooth" label="Smooth" />
         <ToggleGroupControlOption value="rigid" label="Rigid" />
     </ToggleGroupControl>
@@ -193,8 +188,7 @@ const CurveControl = ({ attributes, point, setAttributes, lastPoint }) => {
                 background: '#f0f0f0',
                 padding: '0.5rem 0.5rem 0.25rem',
                 marginBottom: '1rem',
-            }}
-        >
+            }}>
             <RangeControl
                 label={sprintf(__('Peak %s Curve', 'wavy-divider'), point + 1)}
                 step={1}

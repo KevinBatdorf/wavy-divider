@@ -2,7 +2,7 @@
 Contributors:      kbat82
 Tags:              hr, waves, divider, block, wavy, separator, svg, gradient
 Tested up to:      6.2
-Stable tag:        1.3.4
+Stable tag:        1.4.0
 License:           GPL-2.0-or-later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -54,6 +54,13 @@ Within the block inserter, under the Patterns tab, select 'Wavy Divider' from th
 3. Fine tune curves and shuffle waves.
 
 == Changelog ==
+
+= 1.4.0 =
+* Update: Updated the patterns to work with 6.2
+* Tweak: Load patterns in init and check for function_exists
+* Tweak: Prevent attempting to laod patterns if function doesn't exist
+* Removed seasonal patterns
+* Added one new pattern
 
 = 1.3.4 =
 * Chore: Update npm packages + test for WP 6.2
