@@ -58,7 +58,7 @@ Within the block inserter, under the Patterns tab, select 'Wavy Divider' from th
 = 1.4.0 =
 * Update: Updated the patterns to work with 6.2
 * Tweak: Load patterns in init and check for function_exists
-* Tweak: Prevent attempting to laod patterns if function doesn't exist
+* Tweak: Prevent attempting to load patterns if function doesn't exist
 * Removed seasonal patterns
 * Added one new pattern
 
