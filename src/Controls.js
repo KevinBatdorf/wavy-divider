@@ -21,6 +21,8 @@ import {
 import { dice } from './icons'
 
 export const Controls = ({ attributes, setAttributes }) => {
+    const { points, smoothness, startingPeak, opacity, height } = attributes
+    const showCenteredCurve = points === 1 && smoothness === 'smooth'
     return (
         <InspectorControls>
             <PanelBody title={__('Settings', 'wavy-divider')}>
@@ -36,9 +38,9 @@ export const Controls = ({ attributes, setAttributes }) => {
                     <RangeControl
                         label={__('Height', 'wavy-divider')}
                         step={50}
-                        min={100}
+                        min={50}
                         max={1000}
-                        value={attributes.height}
+                        value={height}
                         onChange={(height) =>
                             setAttributes({
                                 height,
@@ -51,7 +53,7 @@ export const Controls = ({ attributes, setAttributes }) => {
                         step={1}
                         min={1}
                         max={10}
-                        value={attributes.points}
+                        value={points}
                         onChange={(points) => {
                             const { startingPeak, peaks: initialPeaks } =
                                 attributes
@@ -76,75 +78,137 @@ export const Controls = ({ attributes, setAttributes }) => {
                         step={0.1}
                         min={0}
                         max={1}
-                        value={attributes.opacity}
+                        value={opacity}
                         onChange={(opacity) => setAttributes({ opacity })}
                     />
                 </BaseControl>
                 <InfoTip />
             </PanelBody>
-            <PanelBody title={__('Waves', 'wavy-divider')}>
-                <BaseControl>
-                    <Button
-                        style={{ width: '100%' }}
-                        isSecondary
-                        onClick={() => {
-                            const peaks = calculateVariations({
-                                startingPeak: attributes.startingPeak,
-                                points: attributes.points,
-                            })
-                            const endingPeak = peaks.at(-1)[1]
-                            const path = buildPath({
-                                ...attributes,
-                                peaks,
-                                endingPeak,
-                            })
-                            setAttributes({ endingPeak, peaks, path })
-                        }}
-                        icon={<Icon icon={dice()} />}>
-                        {__('Shuffle', 'wavy-divider')}
-                    </Button>
-                </BaseControl>
-                <BaseControl>
-                    <RangeControl
-                        label={sprintf(__('Start', 'wavy-divider'))}
-                        step={1}
-                        min={0}
-                        max={100}
-                        value={Math.round(attributes.startingPeak * 100)}
-                        onChange={(peak) => {
-                            setAttributes({
-                                startingPeak: peak / 100,
-                                path: buildPath({
-                                    ...attributes,
+            {showCenteredCurve ? (
+                // special case for a single point, sooth curve
+                <PanelBody title={__('Single Curve Settings', 'wavy-divider')}>
+                    <BaseControl>
+                        <RangeControl
+                            label={__('Start', 'wavy-divider')}
+                            step={1}
+                            min={0}
+                            max={100}
+                            value={Math.round(startingPeak * 100)}
+                            onChange={(peak) => {
+                                setAttributes({
                                     startingPeak: peak / 100,
-                                }),
-                            })
-                        }}
-                    />
-                    {[...Array(attributes.points).keys()].map((point) => {
-                        if (attributes.smoothness === 'rigid') {
+                                    path: buildPath({
+                                        ...attributes,
+                                        startingPeak: peak / 100,
+                                    }),
+                                })
+                            }}
+                        />
+                        <RangeControl
+                            label={__('Center Peak', 'wavy-divider')}
+                            step={1}
+                            min={0}
+                            max={100}
+                            value={Math.round(attributes.peaks[0][0] * 100)}
+                            onChange={(peak) => {
+                                const peaksNew = [...attributes.peaks]
+                                peaksNew[0] = [peak / 100, peaksNew[0][1]]
+                                const path = buildPath({
+                                    ...attributes,
+                                    peaks: peaksNew,
+                                })
+                                setAttributes({ peaks: peaksNew, path })
+                            }}
+                        />
+                        <RangeControl
+                            label={__('End', 'wavy-divider')}
+                            step={1}
+                            min={0}
+                            max={100}
+                            value={Math.round(attributes.endingPeak * 100)}
+                            onChange={(peak) => {
+                                setAttributes({
+                                    endingPeak: peak / 100,
+                                    path: buildPath({
+                                        ...attributes,
+                                        endingPeak: peak / 100,
+                                    }),
+                                })
+                            }}
+                        />
+                        <Tip>
+                            {__(
+                                'This setting area shows when a single, smooth curve is selected.',
+                                'wavy-divider',
+                            )}
+                        </Tip>
+                    </BaseControl>
+                </PanelBody>
+            ) : (
+                <PanelBody title={__('Waves', 'wavy-divider')}>
+                    <BaseControl>
+                        <Button
+                            style={{ width: '100%' }}
+                            variant="secondary"
+                            onClick={() => {
+                                const peaks = calculateVariations({
+                                    startingPeak: startingPeak,
+                                    points: points,
+                                })
+                                const endingPeak = peaks.at(-1)[1]
+                                const path = buildPath({
+                                    ...attributes,
+                                    peaks,
+                                    endingPeak,
+                                })
+                                setAttributes({ endingPeak, peaks, path })
+                            }}
+                            icon={<Icon icon={dice()} />}>
+                            {__('Shuffle', 'wavy-divider')}
+                        </Button>
+                    </BaseControl>
+                    <BaseControl>
+                        <RangeControl
+                            label={__('Start', 'wavy-divider')}
+                            step={1}
+                            min={0}
+                            max={100}
+                            value={Math.round(startingPeak * 100)}
+                            onChange={(peak) => {
+                                setAttributes({
+                                    startingPeak: peak / 100,
+                                    path: buildPath({
+                                        ...attributes,
+                                        startingPeak: peak / 100,
+                                    }),
+                                })
+                            }}
+                        />
+                        {[...Array(points).keys()].map((point) => {
+                            if (smoothness === 'rigid') {
+                                return (
+                                    <LineControl
+                                        key={point}
+                                        attributes={attributes}
+                                        point={point}
+                                        lastPoint={point === points - 1}
+                                        setAttributes={setAttributes}
+                                    />
+                                )
+                            }
                             return (
-                                <LineControl
+                                <CurveControl
                                     key={point}
                                     attributes={attributes}
                                     point={point}
-                                    lastPoint={point === attributes.points - 1}
+                                    lastPoint={point === points - 1}
                                     setAttributes={setAttributes}
                                 />
                             )
-                        }
-                        return (
-                            <CurveControl
-                                key={point}
-                                attributes={attributes}
-                                point={point}
-                                lastPoint={point === attributes.points - 1}
-                                setAttributes={setAttributes}
-                            />
-                        )
-                    })}
-                </BaseControl>
-            </PanelBody>
+                        })}
+                    </BaseControl>
+                </PanelBody>
+            )}
         </InspectorControls>
     )
 }
@@ -262,7 +326,7 @@ const LineControl = ({ attributes, point, setAttributes, lastPoint }) => {
         />
     ) : (
         <RangeControl
-            label={sprintf(__('End', 'wavy-divider'))}
+            label={__('End', 'wavy-divider')}
             step={1}
             min={0}
             max={100}

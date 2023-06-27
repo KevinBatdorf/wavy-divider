@@ -24,7 +24,19 @@ const buildLines = ({ points, height, peaks, endingPeak }) => {
         .join('')
 }
 
-const buildCurves = ({ points, height, peaks, endingPeak }) => {
+const buildCurves = ({ points, height, peaks, startingPeak, endingPeak }) => {
+    // Special case for 1 point
+    if (points === 1) {
+        const startingPoint = height * (1 - startingPeak)
+        const endingPoint = height * (1 - endingPeak)
+        const controlY = -height - startingPoint - height - endingPoint
+        const centerPointY = controlY * (peaks[0][0] / 2) + height
+        return ` Q 50,${centerPointY} 100,${(
+            height -
+            height * endingPeak
+        ).toFixed(0)}`
+    }
+
     let previousX = 0
     return [...Array(points)]
         .map((_, i) => {
@@ -84,6 +96,7 @@ export const buildPath = ({
     startingPeak,
     endingPeak,
 }) => {
+    console.log({ startingPeak, endingPeak })
     const startingPosition = `M 0,${(height - height * startingPeak).toFixed(
         0,
     )}`
@@ -94,6 +107,7 @@ export const buildPath = ({
                   points,
                   height,
                   peaks,
+                  startingPeak,
                   endingPeak,
               })
 
