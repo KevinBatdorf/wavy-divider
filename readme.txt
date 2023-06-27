@@ -50,9 +50,8 @@ Within the block inserter, under the Patterns tab, select 'Wavy Divider' from th
 == Screenshots ==
 
 1. Separate content with wavy dividers
-2. Add gradients in combination with group blocks
-3. Control height, point count, smoothness, and more.
-3. Set 1 peak to create a single smooth curve
+1. Add gradients in combination with group blocks
+1. Set 1 peak to create a single smooth curve
 
 == Changelog ==
 
