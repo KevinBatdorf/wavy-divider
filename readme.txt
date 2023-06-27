@@ -2,7 +2,7 @@
 Contributors:      kbat82
 Tags:              hr, waves, divider, block, wavy, separator, svg, gradient
 Tested up to:      6.2
-Stable tag:        1.4.0
+Stable tag:        1.5.0
 License:           GPL-2.0-or-later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -24,6 +24,7 @@ Generate and add a simple wavy divider to anywhere on your page, giving you the 
 - Stack multiple dividers with group block (see below)
 - Gradients - easy to use (see below)
 - Control height, number of points, and direction
+- Use a single, smooth point to give you a curved divider
 
 = Gradients =
 
@@ -38,7 +39,7 @@ If nesting the wavy divider in a group block, you may want to remove the padding
 
 = Patterns =
 
-Within the block inserter, under the Patterns tab, select 'Wavy Divider' from the dropdown menu to view some special, custom-made wavy patterns. And depending on the time of year, seasonal designs too!
+Within the block inserter, under the Patterns tab, select 'Wavy Divider' from the dropdown menu to view some example patterns.
 
 == Installation ==
 
@@ -51,9 +52,12 @@ Within the block inserter, under the Patterns tab, select 'Wavy Divider' from th
 1. Separate content with wavy dividers
 2. Add gradients in combination with group blocks
 3. Control height, point count, smoothness, and more.
-3. Fine tune curves and shuffle waves.
+3. Set 1 peak to create a single smooth curve
 
 == Changelog ==
+
+= 1.5.0 =
+- Feature: Center wave when only 1 point is selected and is smooth
 
 = 1.4.0 =
 * Update: Updated the patterns to work with 6.2

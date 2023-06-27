@@ -38,5 +38,10 @@ add_action('init', function () {
             'categories' => ['wavy-dividers'],
             'content' => file_get_contents(__DIR__ . '/gradients/gradient-2.html'),
         ]);
+        register_block_pattern('wavy/gradient-3', [
+            'title' => 'Wavy Gradient 3',
+            'categories' => ['wavy-dividers'],
+            'content' => file_get_contents(__DIR__ . '/gradients/gradient-3.html'),
+        ]);
     }
 });
