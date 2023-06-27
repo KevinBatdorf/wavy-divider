@@ -96,7 +96,6 @@ export const buildPath = ({
     startingPeak,
     endingPeak,
 }) => {
-    console.log({ startingPeak, endingPeak })
     const startingPosition = `M 0,${(height - height * startingPeak).toFixed(
         0,
     )}`
