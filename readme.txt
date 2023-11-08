@@ -1,7 +1,7 @@
 === Wavy Divider ===
 Contributors:      kbat82
 Tags:              hr, waves, divider, block, wavy, separator, svg, gradient
-Tested up to:      6.3
+Tested up to:      6.4
 Stable tag:        1.5.0
 License:           GPL-2.0-or-later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
