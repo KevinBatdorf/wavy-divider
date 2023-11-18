@@ -21,7 +21,8 @@ import {
 import { dice } from './icons'
 
 export const Controls = ({ attributes, setAttributes }) => {
-    const { points, smoothness, startingPeak, opacity, height } = attributes
+    const { points, smoothness, startingPeak, opacity, height, viewBoxOffset } =
+        attributes
     const showCenteredCurve = points === 1 && smoothness === 'smooth'
     return (
         <InspectorControls>
@@ -80,6 +81,20 @@ export const Controls = ({ attributes, setAttributes }) => {
                         max={1}
                         value={opacity}
                         onChange={(opacity) => setAttributes({ opacity })}
+                    />
+                    <RangeControl
+                        label={__('ViewBox offset', 'wavy-divider')}
+                        help={__(
+                            'Adjust the svg viewBox value to account for tiny pixel offsets.',
+                            'wavy-divider',
+                        )}
+                        step={1}
+                        min={-5}
+                        max={5}
+                        value={attributes.viewBoxOffset || 0}
+                        onChange={(viewBoxOffset) => {
+                            setAttributes({ viewBoxOffset })
+                        }}
                     />
                 </BaseControl>
                 <InfoTip />

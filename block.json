@@ -53,6 +53,10 @@
             "type": "string",
             "default": "smooth"
         },
+        "viewBoxOffset": {
+            "type": "number",
+            "default": 0
+        },
         "align": {
             "type": "string",
             "default": "full"

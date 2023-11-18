@@ -2,7 +2,7 @@
 Contributors:      kbat82
 Tags:              hr, waves, divider, block, wavy, separator, svg, gradient
 Tested up to:      6.4
-Stable tag:        1.5.0
+Stable tag:        1.6.0
 License:           GPL-2.0-or-later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -54,6 +54,9 @@ Within the block inserter, under the Patterns tab, select 'Wavy Divider' from th
 1. Set 1 peak to create a single smooth curve
 
 == Changelog ==
+
+= 1.6.0 =
+- Feature: Add viewBox fine tuning to fix instances where a tiny pixel gap my appear
 
 = 1.5.0 =
 - Feature: Center wave when only 1 point is selected and is smooth

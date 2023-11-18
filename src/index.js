@@ -18,8 +18,8 @@ registerBlockType('wavy/wavy-divider', {
             opacity: 1,
             height: 200,
             fill: '#bbbbbb',
-            path:
-                'M 0,180 S 21,138 28,87 S 46,141 53,144 S 71,141 78,141 S 96,162 100,198 V 300 H 0 Z',
+            viewBoxOffset: 0,
+            path: 'M 0,180 S 21,138 28,87 S 46,141 53,144 S 71,141 78,141 S 96,162 100,198 V 300 H 0 Z',
         },
     },
     edit: ({ attributes, setAttributes }) => {

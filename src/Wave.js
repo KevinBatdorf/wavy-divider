@@ -7,6 +7,7 @@ export const Wave = ({
     opacity,
     path,
     fill,
+    viewBoxOffset = 0,
 }) => {
     // Fill is passed in only for the example currently
     if (!fill) {
@@ -20,7 +21,7 @@ export const Wave = ({
         <svg
             fill="none"
             role="separator"
-            viewBox={`0 0 100 ${height}`}
+            viewBox={`0 0 100 ${height + viewBoxOffset}`}
             preserveAspectRatio="none"
             aria-orientation="horizontal"
             aria-hidden={true}
@@ -29,8 +30,7 @@ export const Wave = ({
                 height: `${height}px`,
                 width: '100%',
                 display: 'block',
-            }}
-        >
+            }}>
             <path
                 style={{ transition: 'all .5s ease', opacity }}
                 fill={fill}
@@ -47,4 +47,5 @@ Wave.propTypes = {
     opacity: PropTypes.number,
     path: PropTypes.string,
     fill: PropTypes.string,
+    viewBoxOffset: PropTypes.number,
 }
