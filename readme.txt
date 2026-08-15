@@ -2,7 +2,7 @@
 Contributors:      kbat82
 Tags:              hr, waves, divider, block, wavy, separator, svg, gradient
 Tested up to:      7.1
-Stable tag:        1.6.0
+Stable tag:        1.7.0
 License:           GPL-2.0-or-later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -54,6 +54,10 @@ Within the block inserter, under the Patterns tab, select 'Wavy Divider' from th
 1. Set 1 peak to create a single smooth curve
 
 == Changelog ==
+
+= 1.7.0 =
+- Tweak: Move the block to apiVersion 3 so it renders in the iframed editor
+- Tweak: Tested up to WordPress 7.1
 
 = 1.6.0 =
 - Feature: Add viewBox fine tuning to fix instances where a tiny pixel gap my appear

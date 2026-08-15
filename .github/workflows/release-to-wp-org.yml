@@ -1,4 +1,6 @@
 name: Deploy to WordPress.org
+permissions:
+    contents: write
 on:
     release:
         types: [published]
@@ -28,11 +30,9 @@ jobs:
                   SLUG: wavy-divider
 
             - name: Upload release asset
-              uses: actions/upload-release-asset@v1
+              run: |
+                  gh release upload "${{ github.event.release.tag_name }}" \
+                    "${{ steps.deploy.outputs.zip-path }}#${{ github.event.repository.name }}.zip" \
+                    --clobber
               env:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-              with:
-                  upload_url: ${{ github.event.release.upload_url }}
-                  asset_path: ${{ steps.deploy.outputs.zip-path }}
-                  asset_name: ${{ github.event.repository.name }}.zip
-                  asset_content_type: application/zip
