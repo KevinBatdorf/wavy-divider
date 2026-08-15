@@ -1,6 +1,6 @@
 {
     "$schema": "https://json.schemastore.org/block.json",
-    "apiVersion": 2,
+    "apiVersion": 3,
     "name": "wavy/wavy-divider",
     "version": "0.1.0",
     "title": "Wavy Divider",
